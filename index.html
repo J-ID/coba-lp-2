@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIGA TECH - Melayani Jasa IT & Penjualan Produk</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts Inter & Outfit -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-300"
+  >
+    <nav
+      class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors"
+    >
+      <div
+        class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-500/20"
+          >
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <span
+            class="font-heading font-extrabold text-xl tracking-tight bg-gradient-to-r from-brand-600 to-accent-500 bg-clip-text text-transparent"
+          >
+            GIGA TECH
+          </span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Theme Toggle Button -->
+          <button
+            id="themeToggle"
+            class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+            aria-label="Toggle Theme"
+          >
+            <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+          </button>
+          <button
+            onclick="
+              openModal(
+                'Hubungi Kami',
+                'Silakan pilih saluran komunikasi favorit Anda untuk berkonsultasi langsung dengan tim IT kami.',
+              )
+            "
+            class="bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition duration-200 shadow-md shadow-brand-600/20 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Hubungi Kami</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 py-10 sm:py-16 flex-grow w-full">
+      <!-- HEADER SECTION (NAMA TOKO -> MELAYANI -> JUAL) -->
+      <header class="text-center mb-12 sm:mb-16">
+        <!-- NAMA TOKO -->
+        <div
+          class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-300 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-brand-200 dark:border-brand-800 mb-4"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+          ></span>
+          Toko & Pusat Layanan IT Terpercaya
+        </div>
+        <h1
+          class="font-heading text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6"
+        >
+          GIGA TECH STORE
+        </h1>
+
+        <!-- SUBTITLE 1: MELAYANI & SUBTITLE 2: JUAL -->
+        <div
+          class="max-w-3xl mx-auto space-y-4 glass-card p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none"
+        >
+          <!-- MELAYANI -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-slate-700 dark:text-slate-200 font-medium"
+          >
+            <span
+              class="inline-flex items-center gap-2 font-heading font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 px-3 py-1 rounded-lg border border-brand-100 dark:border-brand-900/50 text-sm sm:text-base"
+            >
+              <i class="fa-solid fa-screwdriver-wrench"></i> MELAYANI
+            </span>
+            <span
+              class="text-slate-600 dark:text-slate-400 text-sm sm:text-base text-center sm:text-left"
+            >
+              Servis Hardware/Software, Instalasi Jaringan, & Maintenance IT
+              Office
+            </span>
+          </div>
+
+          <div
+            class="border-t border-slate-200/80 dark:border-slate-800/80 my-2"
+          ></div>
+
+          <!-- JUAL -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-slate-700 dark:text-slate-200 font-medium"
+          >
+            <span
+              class="inline-flex items-center gap-2 font-heading font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-lg border border-emerald-100 dark:border-emerald-900/50 text-sm sm:text-base"
+            >
+              <i class="fa-solid fa-cart-shopping"></i> JUAL
+            </span>
+            <span
+              class="text-slate-600 dark:text-slate-400 text-sm sm:text-base text-center sm:text-left"
+            >
+              Laptop, PC Gaming/Kasir, Sparepart Original, & Aksesoris IT
+              Terlengkap
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT SECTION: 3 BOXES AS SKETCHED -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <!-- KOTAK 1: JASA REPAIR & MAINTENANCE IT -->
+        <article
+          class="card-glow bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between relative overflow-hidden group"
+        >
+          <div
+            class="absolute -top-12 -right-12 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl group-hover:bg-brand-500/20 transition duration-500"
+          ></div>
+
+          <div>
+            <!-- Badge Icon -->
+            <div
+              class="w-12 h-12 bg-brand-50 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 rounded-2xl flex items-center justify-center text-xl mb-5 shadow-sm border border-brand-100 dark:border-brand-800"
+            >
+              <i class="fa-solid fa-laptop-medical"></i>
+            </div>
+
+            <span
+              class="text-xs font-bold tracking-wider text-brand-600 dark:text-brand-400 uppercase"
+              >Layanan Servis</span
+            >
+            <h2
+              class="font-heading text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3"
+            >
+              Perbaikan & Maintenance IT
+            </h2>
+            <p
+              class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6"
+            >
+              Layanan cepat perbaikan laptop/PC mati total, instalasi sistem,
+              pembersihan virus, serta perawatan rutin perangkat perkantoran.
+            </p>
+
+            <ul
+              class="space-y-2.5 mb-8 text-xs sm:text-sm text-slate-700 dark:text-slate-300"
+            >
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-500"></i>
+                <span>Servis Laptop & PC Desktop</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-500"></i>
+                <span>Re-Thermal Paste & Overhaul</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-500"></i>
+                <span>Optimasi Software & Antivirus</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-500"></i>
+                <span>Layanan Servis Panggilan (On-site)</span>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            onclick="
+              openModal(
+                'Layanan Perbaikan & Maintenance IT',
+                'Solusi teknis lengkap untuk menjamin laptop dan komputer Anda kembali bekerja secara optimal dengan garansi servis resmi.',
+              )
+            "
+            class="w-full bg-slate-100 hover:bg-brand-600 dark:bg-slate-800 dark:hover:bg-brand-600 text-slate-900 dark:text-white hover:text-white font-semibold py-3 rounded-xl transition duration-200 text-sm flex items-center justify-center gap-2 group/btn"
+          >
+            <span>Lihat Detail Layanan</span>
+            <i
+              class="fa-solid fa-arrow-right text-xs transition-transform group-hover/btn:translate-x-1"
+            ></i>
+          </button>
+        </article>
+
+        <!-- KOTAK 2: PENJUALAN HARDWARE & SOFTWARE -->
+        <article
+          class="card-glow bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between relative overflow-hidden group"
+        >
+          <div
+            class="absolute -top-12 -right-12 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition duration-500"
+          ></div>
+
+          <div>
+            <!-- Badge Icon -->
+            <div
+              class="w-12 h-12 bg-emerald-50 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center text-xl mb-5 shadow-sm border border-emerald-100 dark:border-emerald-800"
+            >
+              <i class="fa-solid fa-box-archive"></i>
+            </div>
+
+            <span
+              class="text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400 uppercase"
+              >Produk IT</span
+            >
+            <h2
+              class="font-heading text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3"
+            >
+              Penjualan Produk Hardware
+            </h2>
+            <p
+              class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6"
+            >
+              Menyediakan hardware original bergaransi resmi. Laptop, rakitan PC
+              custom, sparepart hingga peripheral terlengkap.
+            </p>
+
+            <ul
+              class="space-y-2.5 mb-8 text-xs sm:text-sm text-slate-700 dark:text-slate-300"
+            >
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                <span>PC Rakitan Gaming & Office</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                <span>Laptop Terbaru Bergaransi</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                <span>SSD, RAM, VGA & Power Supply</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                <span>Aksesoris & Printer Kasir</span>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            onclick="
+              openModal(
+                'Penjualan Perangkat & Hardware IT',
+                'Jaminan produk original dengan harga transparan dan garansi terjamin untuk kebutuhan individu maupun kantor.',
+              )
+            "
+            class="w-full bg-slate-100 hover:bg-emerald-600 dark:bg-slate-800 dark:hover:bg-emerald-600 text-slate-900 dark:text-white hover:text-white font-semibold py-3 rounded-xl transition duration-200 text-sm flex items-center justify-center gap-2 group/btn"
+          >
+            <span>Cek Katalog Produk</span>
+            <i
+              class="fa-solid fa-arrow-right text-xs transition-transform group-hover/btn:translate-x-1"
+            ></i>
+          </button>
+        </article>
+
+        <!-- KOTAK 3: JASA NETWORKING & SOLUSI DIGITAL -->
+        <article
+          class="card-glow bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between relative overflow-hidden group"
+        >
+          <div
+            class="absolute -top-12 -right-12 w-32 h-32 bg-accent-500/10 rounded-full blur-2xl group-hover:bg-accent-500/20 transition duration-500"
+          ></div>
+
+          <div>
+            <!-- Badge Icon -->
+            <div
+              class="w-12 h-12 bg-cyan-50 dark:bg-cyan-900/50 text-accent-600 dark:text-accent-500 rounded-2xl flex items-center justify-center text-xl mb-5 shadow-sm border border-cyan-100 dark:border-cyan-800"
+            >
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+
+            <span
+              class="text-xs font-bold tracking-wider text-accent-600 dark:text-accent-500 uppercase"
+              >Jaringan & Sistem</span
+            >
+            <h2
+              class="font-heading text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3"
+            >
+              Networking & CCTV System
+            </h2>
+            <p
+              class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6"
+            >
+              Perancangan & instalasi jaringan infrastruktur LAN/WiFi, Mikrotik
+              router, CCTV keamanan, serta konsultasi IT enterprise.
+            </p>
+
+            <ul
+              class="space-y-2.5 mb-8 text-xs sm:text-sm text-slate-700 dark:text-slate-300"
+            >
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-accent-500"></i>
+                <span>Instalasi Kabel LAN & WiFi Mesh</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-accent-500"></i>
+                <span>Setting Mikrotik & Bandwidth Management</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-accent-500"></i>
+                <span>Pemasangan IP Cam / CCTV HD</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-accent-500"></i>
+                <span>Pembuatan Website Store & Aplikasi</span>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            onclick="
+              openModal(
+                'Networking, CCTV & Solusi Digital',
+                'Bangun infrastruktur jaringan stabil dan sistem keamanan andal untuk meningkatkan efisiensi operasional bisnis Anda.',
+              )
+            "
+            class="w-full bg-slate-100 hover:bg-accent-600 dark:bg-slate-800 dark:hover:bg-accent-600 text-slate-900 dark:text-white hover:text-white font-semibold py-3 rounded-xl transition duration-200 text-sm flex items-center justify-center gap-2 group/btn"
+          >
+            <span>Konsultasi Proyek</span>
+            <i
+              class="fa-solid fa-arrow-right text-xs transition-transform group-hover/btn:translate-x-1"
+            ></i>
+          </button>
+        </article>
+      </section>
+
+      <!-- PROMO CTA BANNER -->
+      <div
+        class="mt-12 bg-gradient-to-r from-brand-600 via-brand-700 to-accent-600 rounded-3xl p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden"
+      >
+        <div class="space-y-2 text-center md:text-left z-10">
+          <span
+            class="bg-white/20 text-xs uppercase font-bold px-3 py-1 rounded-full border border-white/20"
+            >Spesial Promo Minggu Ini</span
+          >
+          <h3 class="font-heading text-2xl sm:text-3xl font-extrabold">
+            Gratis Konsultasi & Diagnostic Perangkat!
+          </h3>
+          <p class="text-brand-100 text-sm max-w-xl">
+            Bawa laptop atau komputer Anda ke toko kami untuk pengecekan awal
+            tanpa dipungut biaya.
+          </p>
+        </div>
+        <button
+          onclick="
+            sendWhatsApp(
+              'Halo, saya ingin reservasi Konsultasi & Diagnostic Perangkat gratis.',
+            )
+          "
+          class="z-10 bg-white hover:bg-slate-100 text-brand-700 font-bold px-6 py-3.5 rounded-2xl shadow-lg transition text-sm flex items-center gap-2 min-w-max"
+        >
+          <i class="fa-brands fa-whatsapp text-lg text-emerald-600"></i>
+          <span>Hubungi via WhatsApp</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- INTERACTIVE MODAL -->
+    <div
+      id="infoModal"
+      class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4 transition-opacity duration-300"
+    >
+      <div
+        class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-2 rounded-lg"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <div id="modalHeader" class="mb-4">
+          <h3
+            id="modalTitle"
+            class="font-heading text-2xl font-bold text-slate-900 dark:text-white"
+          ></h3>
+        </div>
+
+        <p
+          id="modalDescription"
+          class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6"
+        ></p>
+
+        <div
+          class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 mb-6"
+        >
+          <h4
+            class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2"
+          >
+            Respons Cepat via WhatsApp
+          </h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Tim customer support kami aktif jam 08.00 - 21.00 WIB untuk membantu
+            konsultasi Anda.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-end gap-3">
+          <button
+            onclick="closeModal()"
+            class="px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+          >
+            Tutup
+          </button>
+          <button
+            id="modalWaBtn"
+            onclick=""
+            class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition flex items-center gap-2 shadow-md shadow-emerald-600/20"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Tanya via WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 transition-colors"
+    >
+      <div
+        class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-7 h-7 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xs"
+          >
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <span
+            class="font-heading font-bold text-slate-900 dark:text-white text-sm"
+            >GIGA TECH STORE</span
+          >
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400">
+          &copy; 2026 NEXUS TECH. All rights reserved. Solusi IT Lengkap &
+          Terpercaya.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

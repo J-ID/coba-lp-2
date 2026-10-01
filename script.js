@@ -24,9 +24,6 @@ tailwind.config = {
   },
 };
 
-// WhatsApp Phone Number (Update with your own number)
-const waNumber = "6281234567890";
-
 // Dark/Light Theme Handler
 const themeToggleBtn = document.getElementById("themeToggle");
 const themeIcon = document.getElementById("themeIcon");
@@ -55,12 +52,6 @@ themeToggleBtn.addEventListener("click", function () {
     themeIcon.classList.replace("fa-moon", "fa-sun");
   }
 });
-
-// WhatsApp Sender Helper
-function sendWhatsApp(message) {
-  const encodedText = encodeURIComponent(message);
-  window.open(`https://wa.me/${waNumber}?text=${encodedText}`, "_blank");
-}
 
 // Modal Handlers
 function openModal(title, description) {
